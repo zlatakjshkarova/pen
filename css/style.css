@@ -5,6 +5,12 @@
 .wrapper {
     min-height: 100%;
     overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+html {
+
+    @media(prefers-red)
 }
 
 html,
@@ -54,6 +60,7 @@ h6 {
 }
 
 .logo {
+    display: inline-block;
     width: 96px;
     height: 60px;
 }
@@ -126,6 +133,14 @@ h6 {
     display: inline-block;
     padding: 25px 40px;
     text-transform: uppercase;
+    border: none;
+    transition: background 0.3s;
+}
+
+
+.btn:hover {
+    background-color: rgb(125, 125, 236);
+
 }
 
 .hero__title {}
@@ -199,9 +214,13 @@ h6 {
     padding-top: 100px;
 }
 
+.skills:hover .skill_desc {
+    color: #34547a;
+}
 
-
-
+.skills:hover .skill_meter::-webkit-meter-optimum-value {
+    background-color: #eeeff1;
+}
 
 .section-title {
     font-size: 23px;
@@ -397,12 +416,24 @@ h6 {
 
 .form_input {
     flex: 1;
-    padding: 18px 21px;
-    border: #eeeff1;
+    padding: 18px 20px;
+    border: none;
+    outline: none;
 }
+
+.form_input::placeholder {
+    color: blue;
+}
+
 
 .form_user-info {}
 
+.from_text {
+    width: 500px;
+    height: 175px;
+    /*запретить*/
+    resize: none;
+}
 
 
 .form_inputs {
@@ -412,8 +443,13 @@ h6 {
 }
 
 .form_btn-wrap {
-    display: flex;
-    justify-content: center;
+
+    align-items: center;
+}
+
+.from_btn {
+    padding: 20px;
+    min-width: 190px;
 }
 
 .footer {
@@ -432,7 +468,7 @@ h6 {
 .footer_content {
     flex-direction: column;
     display: flex;
-
+    column-gap: 20px;
 }
 
 .lists {
@@ -475,6 +511,6 @@ h6 {
     font-size: 12px;
 }
 
-.test_footer {
+.author {
     font-size: 14px;
 }
